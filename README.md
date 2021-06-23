@@ -1,7 +1,8 @@
 # PokeApp
 Mobile Apps that contains an pokemons cards with many information about the pokemons
+![PokeApp1](https://user-images.githubusercontent.com/79618314/123030269-bff2f980-d40c-11eb-8a34-7b996a17237b.png)
+![PokeApp2](https://user-images.githubusercontent.com/79618314/123030281-c41f1700-d40c-11eb-9a9d-c913bd458a6a.png)
 
-![PokeApp](https://user-images.githubusercontent.com/79618314/123029825-ed8b7300-d40b-11eb-91f6-eed62493ddb8.png)
 
 
 
