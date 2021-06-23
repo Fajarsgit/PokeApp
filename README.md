@@ -9,15 +9,16 @@ Mobile Apps that contains an pokemons cards with many information about the poke
 
 
 
-
-
-
 To Start the Project
 
-cd pokemon => yarn
 
-Open Another Terminal
+
+Open Terminal:
+
 cd server => yarn start
 
-Open Another Terminal Again
+
+
+Open Another Terminal:
+
 cd mobile => yarn start
