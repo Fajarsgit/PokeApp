@@ -1,5 +1,4 @@
 {
-  "name": "pokedex",
   "version": "1.0.0",
   "main": "./index",
   "private": false,
