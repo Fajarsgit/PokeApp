@@ -195,7 +195,7 @@ const Home = () => {
     <Container>
       <Header>
         <Text variant="title" style={{ paddingTop: 43 }}>Pokedex</Text>
-        <PokeIcon source={require('./asset/pokeball.png')} style={{ width: 90, height:90,}} tintColor='#e8e8e8' />
+        <PokeIcon source={require('./asset/pokeball.png')} style={{ width: 90, height:90,}} tintColor='#e8e8e8'/>
       </Header>
       
       <PokemonsList
