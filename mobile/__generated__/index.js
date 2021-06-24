@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <StatusBar style="dark" backgroundColor="#FFF" translucent />
+      <StatusBar style="dark" backgroundColor="transparent" translucent />
 
       <ThemeProvider theme={theme}>
         <AppProvider>

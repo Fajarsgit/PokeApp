@@ -8,7 +8,7 @@ import { Pokemon } from '../../../types';
 import Text from '../../../components/Text';
 import Pokeball from '../../../components/Pokeball';
 
-import { Container, GoBackButton } from './styles';
+import { Container, GoBackButton, HeartIcon } from './styles';
 import { ScrollView } from 'react-native-gesture-handler';
 
 type HeaderProps = {
@@ -37,6 +37,10 @@ const Header = ({ pokemon, translateY }: HeaderProps) => {
       <GoBackButton onPress={handleGoBack}>
         <Icon name="arrow-left" color={colors.white} size={24} />
       </GoBackButton>
+      
+      <HeartIcon>
+      <Icon name="heart" color={colors.white} size={24} />
+      </HeartIcon>
       
       <Animated.View style={fadeStyle}>
         <Text variant="body1" color="white" bold>

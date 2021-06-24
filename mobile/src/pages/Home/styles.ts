@@ -1,17 +1,16 @@
 import styled from 'styled-components/native';
-import { Animated, FlatList } from 'react-native';
+import { Animated, FlatList, ImageBackground } from 'react-native';
 
 import { RectButton } from 'react-native-gesture-handler';
 import { Pokemon } from '../../types';
 
 export const Container = styled.View`
   flex: 1;
-  position: relative;
 `;
 
 export const PokemonsList = styled(FlatList as new () => FlatList<Pokemon>)`
   flex: 1;
-  margin-top: 8px;
+  margin-top: 35px;
 `;
 
 export const Button = styled(RectButton)`
@@ -31,4 +30,20 @@ export const Button = styled(RectButton)`
 
 export const OverlayBackground = styled(Animated.View)`
   background: ${({ theme }) => `${theme.colors.black}60`};
+`;
+
+export const Dot = styled.View`
+  width: 6px;
+  height: 6px;
+  background: ${({ theme }) => theme.colors.white}20;
+  margin-left: 8px;
+  margin-top: 10px;
+`;
+
+export const PokeIcon = styled(ImageBackground)`
+  flex: 1;
+  position: absolute;
+  margin-left: 258px;
+  padding-top: 50px;
+  margin-bottom: 5px;
 `;

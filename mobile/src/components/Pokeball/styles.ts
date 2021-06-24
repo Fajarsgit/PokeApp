@@ -4,8 +4,7 @@ import { Animated } from 'react-native';
 import { PokeballProps } from './index';
 
 export const Container = styled(Animated.View)`
-  z-index: -1;
-
+  right: -10px;
   align-items: center;
   justify-content: center;
 `;

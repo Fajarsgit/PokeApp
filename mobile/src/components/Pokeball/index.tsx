@@ -67,13 +67,13 @@ const Pokeball = ({
   };
 
   return (
-    <Container style={[withRotate && pokeballStyle, style]}>
+    <Container style={[withRotate && pokeballStyle, style, Container]}>
       <PokeballImage
         source={pokeballImage}
         width={width}
         height={height}
         style={{
-          tintColor: color,
+          tintColor: color
         }}
       />
     </Container>
@@ -83,7 +83,7 @@ const Pokeball = ({
 Pokeball.defaultProps = {
   color: `${theme.colors.white}20`,
   widthRotate: false,
-  style: {},
+  style: {}
 };
 
 export default Pokeball;

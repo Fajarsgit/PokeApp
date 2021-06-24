@@ -10,4 +10,15 @@ export const GoBackButton = styled.TouchableOpacity`
 
   align-items: center;
   justify-content: center;
+  margin-top: 12px;
+`;
+
+export const HeartIcon = styled.TouchableOpacity`
+  width: 40px;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+  margin-left: 230px;
+  margin-top: 12px;
 `;

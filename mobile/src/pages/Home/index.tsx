@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { View, Animated, Alert, Dimensions, StyleSheet } from 'react-native';
+import { View, Animated, Alert, Dimensions, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import api from '../../services/api';
 import { API_OFFSET } from '../../constants';
 import { Pokemon } from '../../types';
@@ -9,12 +9,16 @@ import Loading from '../../components/Loading';
 import Header from '../../components/Header';
 import PokemonCard from './PokemonCard';
 import SearchModal from './SearchModal';
-import { Container, PokemonsList, Button, OverlayBackground  } from './styles';
+import { Container, PokemonsList, Button, OverlayBackground, PokeIcon  } from './styles';
 
 
 import  FloatingButton  from './FloatingButton/index';
 import { ItemButton } from './FloatingButton/Menu/styles';
 import { useTheme } from 'styled-components';
+import Block from '../../components/Block';
+import Dots from '../../components/Dots';
+import Pokeball from '../../components/Pokeball';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 export const MENU_ITEM_TRANSLATE_X = -width;
@@ -29,7 +33,7 @@ const items = [
   },
 ];
 const Home = () => {
-  
+  const navigation = useNavigation();
   const { handleToggleSearch } = useSearch();
   const translateX = useMemo(
     () => new Animated.Value(MENU_ITEM_TRANSLATE_X),
@@ -161,6 +165,23 @@ const Home = () => {
     setRefreshing(false);
   }, [loadPokemons]);
 
+  const dotsStyle = {
+    opacity: translateY.interpolate({
+      inputRange: [-200, 0],
+      outputRange: [0, 1],
+      extrapolate: 'clamp',
+    }),
+  };
+  
+  const fadeStyle = {
+    opacity: translateY.interpolate({
+      inputRange: [-300, -200],
+      outputRange: [1, 0],
+      extrapolate: 'clamp',
+    }),
+  };
+   
+
   if (loadingInitalData) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -173,9 +194,10 @@ const Home = () => {
   return (
     <Container>
       <Header>
-        <Text variant="title" style={{ paddingTop: 30 }}>Pokedex</Text>
+        <Text variant="title" style={{ paddingTop: 43 }}>Pokedex</Text>
+        <PokeIcon source={require('./asset/pokeball.png')} style={{ width: 90, height:90,}} tintColor='#e8e8e8' backgroundColor='transparent'/>
       </Header>
-
+      
       <PokemonsList
         data={pokemons}
         showsVerticalScrollIndicator={false}

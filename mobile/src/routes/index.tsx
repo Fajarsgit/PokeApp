@@ -13,11 +13,17 @@ const Routes = () => {
 
   return (
     <Stack.Navigator
+      initialRouteName="Home"
       screenOptions={{
         gestureEnabled: false,
         headerShown: false,
+        headerTransparent: true,
         cardStyle: {
-          backgroundColor: colors.white,
+          backgroundColor: "transparent",
+        },
+        headerStyle: {
+          elevation: 0,
+          backgroundColor: 'transparent',
         },
       }}
     >
